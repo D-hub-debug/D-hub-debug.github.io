@@ -118,7 +118,6 @@ section h2 {
     color: transparent;
 }
 
-
 section p {
     font-size: 1.2rem;
     margin-bottom: 30px;
@@ -146,22 +145,25 @@ section p {
     color: #ff4081;
 }
 
-
 .experiment-img {
     width: 50%; /* Adjust the percentage as needed */
     height: auto; /* Maintain aspect ratio */
 }
 
+/* Responsive Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    display: block; /* Makes table block-level for scrolling */
 }
 
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping */
 }
 
 th {
@@ -174,17 +176,7 @@ caption {
     margin: 10px 0;
 }
 
-.small-text {
-    font-size: smaller;
-}
-
-.experiment-img {
-    width: 50%;
-    height: auto;
-}
-
-
-
+/* Button Styling */
 button {
     padding: 14px 30px;
     background-color: #ff4081;
@@ -285,6 +277,14 @@ footer p {
         margin-bottom: 30px;
         padding: 25px;
     }
+
+    table {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    th, td {
+        padding: 6px; /* Reduce padding */
+    }
 }
 
 @media (max-width: 480px) {
@@ -313,5 +313,16 @@ footer p {
 
     footer {
         padding: 20px;
+    }
+
+    table {
+        font-size: 0.8rem; /* Further reduce font size */
+        display: block;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    th, td {
+        padding: 5px; /* Further reduce padding */
     }
 }
